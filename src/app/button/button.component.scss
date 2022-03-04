@@ -9,7 +9,7 @@
 $colorMap: (
   default: (
     text: rgb(63, 63, 63),
-    base: #E0E0E0,
+    base: #e0e0e0,
     light: rgb(122, 120, 120),
     dark: rgb(63, 63, 63),
   ),
@@ -21,13 +21,13 @@ $colorMap: (
   ),
   secondary: (
     text: #fff,
-    base: #455A64,
+    base: #455a64,
     light: #239232,
-    dark: #455A64,
+    dark: #455a64,
   ),
   danger: (
     text: #fff,
-    base: #D32F2F,
+    base: #d32f2f,
     light: #d84f6d,
     dark: #9b344a,
   ),
@@ -54,6 +54,7 @@ $colorMap: (
   cursor: pointer;
 
   height: rem(40);
+  width: 50%;
   padding: rem(6) rem(12);
 
   display: inline-flex;
@@ -69,7 +70,6 @@ $colorMap: (
 
       img {
         margin: 0 rem(5) 0 0;
-
       }
     }
     img {
@@ -88,19 +88,21 @@ $colorMap: (
     color: #999;
     border: 1px solid rgb(61, 90, 254);
   }
+  &--outline:hover{
+    background: #d0eaf5
+  }
 
   @include color-modifiers();
 }
-.custom-button--default:hover{
-  background: #AEAEAE;;
+.custom-button--default:hover {
+  background: #aeaeae;
 }
-.custom-button--secondary:hover{
-  background:  #1C313A;
+.custom-button--secondary:hover {
+  background: #1c313a;
 }
-.custom-button--primary:hover{
-  background:  #910b3e;
+.custom-button--primary:hover {
+  background: #910b3e;
 }
-.custom-button--danger:hover{
-  background:  #9A0007;
+.custom-button--danger:hover {
+  background: #9a0007;
 }
-
