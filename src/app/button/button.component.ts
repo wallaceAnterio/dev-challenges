@@ -22,7 +22,11 @@ export class ButtonComponent implements OnInit {
   }
 
   @HostBinding('class.custom-button') _customButton = true;
-  @HostBinding('class.custom-button--outline') _outline = false;
+  @HostBinding('class.custom-button--outline') _outline = true;
+
+  @HostBinding('class.custom-button--default') get default(): boolean {
+    return this.color === 'default';
+  }
 
   @HostBinding('class.custom-button--danger') get danger(): boolean {
     return this.color === 'danger';

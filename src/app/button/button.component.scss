@@ -8,10 +8,10 @@
 // Será usado para gerar classes para cores dinamicamente pelo color-modifiermixin.
 $colorMap: (
   default: (
-    text: #fff,
-    base: #cc3656,
-    light: #d84f6d,
-    dark: #9b344a,
+    text: rgb(63, 63, 63),
+    base: #E0E0E0,
+    light: rgb(122, 120, 120),
+    dark: rgb(63, 63, 63),
   ),
   primary: (
     text: #fff,
@@ -21,13 +21,13 @@ $colorMap: (
   ),
   secondary: (
     text: #fff,
-    base: #12721f,
+    base: #455A64,
     light: #239232,
-    dark: #13521b,
+    dark: #455A64,
   ),
   danger: (
     text: #fff,
-    base: #ff4b2b,
+    base: #D32F2F,
     light: #d84f6d,
     dark: #9b344a,
   ),
@@ -48,11 +48,13 @@ $colorMap: (
 
 .custom-button {
   border: none;
-  border-radius: rem(6);
-  font-size: rem(16);
+  border-radius: rem(5.5);
+  font-size: rem(14);
   line-height: rem(15);
+  cursor: pointer;
 
-  height: rem(50);
+  height: rem(30);
+  // width: rem(80);
   padding: rem(6) rem(12);
 
   display: inline-flex;
@@ -68,11 +70,12 @@ $colorMap: (
 
       img {
         margin: 0 rem(5) 0 0;
+
       }
     }
     img {
-      width: rem(24);
-      height: rem(24);
+      width: rem(14);
+      height: rem(14);
       margin-left: rem(5);
     }
   }
@@ -84,8 +87,24 @@ $colorMap: (
   &--outline {
     background: transparent;
     color: #999;
-    border: 1px solid #999;
+    border: 1px solid rgb(61, 90, 254);
   }
 
   @include color-modifiers();
+}
+.custom-button--default:hover{
+  background: #AEAEAE;;
+}
+.custom-button--secondary:hover{
+  background:  #1C313A;
+}
+.custom-button--primary:hover{
+  background:  #910b3e;
+}
+.custom-button--danger:hover{
+  background:  #9A0007;
+}
+.custom-button--outline:hover{
+  background:  #dcf0f8;
+  border: 1px solid rgb(44, 91, 221);
 }
