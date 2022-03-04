@@ -1,0 +1,14 @@
+<span
+  class="custon_button__wrapper teste"
+  [class.custom-button__wrapper__icon-left]="iconAlign === 'left'"
+>
+  <ng-content></ng-content>
+  <ng-content select="icon"></ng-content>
+</span>
+
+<!--
+  Criando uma injeção de conteúdo flexível.
+  wrapper: container para injeção de conteúdo do botão;
+  ng-content: principalmente para injeção de texto;
+  ng-content: para injeção de ícones;
+ -->
